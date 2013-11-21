@@ -68,19 +68,19 @@ void implementIntoMatrix(){
         }
         i+=1;
     }
-    /*
-    for (int i= 0; i<datos; i++) {
-        matrixSums[i][datos]=sumPotxY[i];
+    
+    for (int i= 0; i<grado+2; i++) {
+        matrixSums[i][grado+1]=sumPotxY[i];
     }
-     */
+   
     
 }
 void desplegarMatrix(){
 
     for (int i=0; i<grado+1; i++) {
-        for (int j=0; j<=grado; j++) {
-            cout<<matrixSums[i][j]<<" ";
-            //cout<<matrixMontante[i][j]<<" ";
+        for (int j=0; j<=grado+1; j++) {
+            //cout<<matrixSums[i][j]<<" ";
+            cout<<matrixMontante[i][j]<<" ";
         }
         cout<<endl;
     }
@@ -123,8 +123,8 @@ int main() {
     implementIntoMatrix();
  
     // while (n > 0) {
-        for (int r=0; r<n; r++) {
-            for (int c=0; c<n+2; c++) {
+        for (int r=0; r<=d; r++) {
+            for (int c=0; c<=d+1; c++) {
                 matrixMontante[r][c]= matrixSums[r][c];
             }
         }
